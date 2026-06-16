@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo DOM</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        #mensagem { font-size: 24px; margin: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Exemplo simples com DOM</h1>
+    
+    <p id="mensagem">Clique no botão para alterar o texto!</p>
+    
+    <button onclick="alterarTexto()">Alterar Texto</button>
+    <button onclick="mudarCor()">Mudar Cor</button>
+
+    <script>
+        // Função simples que altera o texto
+        function alterarTexto() {
+            const elemento = document.getElementById("mensagem");
+            elemento.innerHTML = "O texto foi alterado com JavaScript! 🎉";
+        }
+
+        // Outra função que altera o estilo (cor)
+        function mudarCor() {
+            const elemento = document.getElementById("mensagem");
+            elemento.style.color = "blue";
+            elemento.style.fontWeight = "bold";
+        }
+    </script>
+
+</body>
+</html>
